@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SignUp</title>
+  </head>
+  <body>
+    <!-- sig-up from start here -->
+    <div class="login-container">
+      <div class="login-content">
+        <div class="loginForm">
+          <h2 class="login">Créer un compte</h2>
+<form action="register.php" method="POST">
+    <div class="form-group">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required />
+    </div>
+    <div class="form-group">
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required />
+    </div>
+    <div class="form-group">
+        <label for="username">E-mail :</label>
+        <input type="email" id="username" name="email" required />
+    </div>
+    <div class="form-group">
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required />
+    </div>
+    <div class="form-group">
+        <label for="confirm">Confirmer le mot de passe :</label>
+        <input type="password" id="confirm" name="confirm" required />
+    </div>
+    <button type="submit" class="submit">S’inscrire</button>
+    <span>
+        J’ai déjà un compte
+        <a href="login.html" class="sign-up">Connexion</a>
+    </span>
+</form>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

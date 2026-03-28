@@ -1,0 +1,63 @@
+⚙️ CONFIGURATION WAMP POUR GMAIL
+=================================
+
+Pour que PHP envoie les emails via Gmail, tu dois modifier php.ini:
+
+ÉTAPE 1: Ouvrir php.ini
+========================
+C:\wamp64\bin\php\php[VERSION]\php.ini
+
+Remplace [VERSION] par ta version:
+- php7.4.26
+- php8.0.x
+- php8.1.x
+etc.
+
+Ou utilise le raccourci WAMP:
+1. Clique sur l'icône WAMP (barre des tâches)
+2. PHP → php.ini
+
+ÉTAPE 2: Modifier la section [mail function]
+==============================================
+Cherche (Ctrl+F): [mail function]
+
+Tu verras:
+[mail function]
+; For Win32 only.
+SMTP = localhost
+smtp_port = 25
+
+REMPLACE par:
+
+[mail function]
+; Configuration Gmail
+SMTP = smtp.gmail.com
+smtp_port = 587
+sendmail_from = "abdourahmanibrahim176@gmail.com"
+
+; Authentification
+; Note: Sur Windows, cette méthode a des limites
+; On utilise donc la fonction mail() native avec les headers
+
+ÉTAPE 3: Redémarrer WAMP
+========================
+1. Clique sur l'icône WAMP
+2. "Restart All Services"
+3. Attends que tout passe en vert
+
+ÉTAPE 4: TESTER
+===============
+Va sur: http://localhost/hotel_reservation/test_email.php
+
+Entre ton email et clique "Envoyer email de test"
+
+Puis CHECK TON GMAIL: abdourahmanibrahim176@gmail.com
+Tu devrais voir l'email! 🎉
+
+IMPORTANT:
+==========
+✅ Gmail doit avoir "Less secure app access" activé
+✅ Le mot de passe est stocké dans api/send_email.php (local uniquement)
+✅ Chaque réservation enverra un email directement
+
+C'EST BON! 🚀

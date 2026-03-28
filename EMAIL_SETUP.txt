@@ -1,0 +1,112 @@
+📧 GUIDE CONFIGURATION EMAIL POUR WAMP
+=====================================
+
+ÉTAPE 1: TESTER SI ÇA MARCHE
+=============================
+Va sur: http://localhost/hotel_reservation/test_email.php
+Entre une adresse email et clique "Envoyer email de test"
+
+RÉSULTAT POSSIBLE 1: ✅ Email envoyé!
+→ Bravo! Rien à faire, continue
+
+RÉSULTAT POSSIBLE 2: ❌ Erreur
+→ Il faut configurer SMTP
+
+
+CONFIGURATION SMTP POUR WAMP (Option 1: Gmail)
+==============================================
+
+1. Ouvre: C:\wamp64\bin\php\php[VERSION]\php.ini
+
+2. Cherche la section [mail function]:
+   ; UNIX: "/usr/sbin/sendmail -t -i"
+   sendmail_path = "..."
+
+3. Remplace par (Windows):
+   SMTP = smtp.gmail.com
+   smtp_port = 587
+   sendmail_from = "tonmail@gmail.com"
+
+4. Dans php.ini, cherche aussi [SMTP] et assure-toi:
+   [mail function]
+   ; WINDOWS ONLY: (':' in cmd.exe and slashes only work with "cmd.exe /c")
+   ; Note that this directive forces an attempt to register a variable named 
+   ; MAILLOG in the global scope
+   sendmail_path = 
+
+   SMTP = smtp.gmail.com
+   smtp_port = 587
+   ; authentification
+   ; (en WINDOWS WAMP c'est plus complexe)
+
+5. Redémarre WAMP Apache
+
+Note: Gmail va bloquer les "apps non sécurisées"
+Solution: Crée une password spéciale (App Password) sur ton compte Google
+
+
+CONFIGURATION SMTP POUR WAMP (Option 2: Utiliser Mailtrap ou SendGrid)
+=======================================================================
+
+Plus simple pour le développement local:
+
+1. Va sur: https://mailtrap.io (gratuit)
+2. Crée un compte
+3. Copie les paramètres SMTP
+4. Mets à jour php.ini avec les infos Mailtrap
+
+Ou utilise sendgrid.com pour plus de volume
+
+
+CONFIGURATION SMTP POUR WAMP (Option 3: Fake SMTP - Emails sauvegardés en fichiers)
+====================================================================================
+
+Si tu veux juste tester sans vraiment envoyer d'emails:
+
+Modifie api/send_email.php à la ligne 73:
+
+Avant:
+    $result = @mail($to, $subject, $message, $headers);
+
+Après (Option A - Sauvegarder en fichier):
+    $result = file_put_contents(
+        __DIR__ . '/../emails_log.txt',
+        "TO: $to\nSUBJECT: $subject\n\n$message\n\n---\n\n",
+        FILE_APPEND
+    );
+
+Après (Option B - Utiliser une classe mock):
+    $result = true;  // Simule un succès
+
+
+SOLUTION RAPIDE RECOMMANDÉE:
+============================
+
+Pour ton développement local WAMP:
+
+1. Va sur https://mailtrap.io
+2. Crée un compte gratuit
+3. Copie les paramètres SMTP du dashboard
+4. Ajoute ceci dans ton php.ini:
+
+[mail function]
+SMTP = smtp.mailtrap.io
+smtp_port = 465
+sendmail_from = "tonmail@royalplaze.com"
+
+5. Redémarre Apache WAMP
+6. Teste sur: http://localhost/hotel_reservation/test_email.php
+
+
+TEST COMPLET:
+=============
+1. Va sur http://localhost/hotel_reservation/index.php
+2. Cherche une chambre
+3. Réserve-la
+4. Vérifie dans ton compte Mailtrap que l'email est arrivé
+
+
+BESOIN D'AIDE?
+==============
+Dis-moi quel provider tu veux utiliser (Gmail, Mailtrap, SendGrid, autre)
+et je te configurerai le code PHP complètement!

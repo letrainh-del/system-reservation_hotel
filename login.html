@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LogIn</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-content">
+        <div class="loginForm">
+          <h2 class="login">Connexion</h2>
+<form action="login.php" method="POST">
+    <div class="form-group">
+        <label for="username">Email :</label>
+        <input type="text" id="username" name="email" required />
+    </div>
+    <div class="form-group">
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required />
+    </div>
+    <button type="submit" class="submit">Se connecter</button>
+    <span>
+        Je n’ai pas de compte
+        <a href="sign-up.html" class="sign-up">S’inscrire</a>
+    </span>
+</form>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

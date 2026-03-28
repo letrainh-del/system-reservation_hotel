@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal plaze hotel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <nav class="navbar">
+          <div class="logo">
+            <h2>Royal Plaze</h2>
+          </div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="navright">
+            <a href="login.html" class="hero-btn btn">connexion</a>
+            <img src="assets/images/moon (1).png" class="moon" />
+            <img src="assets/images/menu.png" class="menu" alt="" />
+          </div>
+        </nav>
+        <!-- home pages start here -->
+        <div class="homePage">
+          <div class="homeContent">
+            <h1>Welcome to <span> Royal Plaze Hotel </span></h1>
+            <p>
+              Experience luxury and comfort like never before at Royal Plaze
+              Hotel. <br />
+              Book your stay with us today!
+            </p>
+            <button class="btn">BOOK NOW</button>
+            <div class="booking-form">
+              <div class="form-item">
+                <label>Check-in</label>
+                <input type="text" id="checkin" placeholder="Select date" />
+              </div>
+
+              <div class="form-item">
+                <label>Check-out</label>
+                <input type="text" id="checkout" placeholder="Select date" />
+              </div>
+
+              <div class="form-item">
+                <label>Guest</label>
+                <input type="number" id="guest" placeholder="1" min="1" />
+              </div>
+
+              <button class="check-btn">Check Availability</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- home pages end here -->
+
+      <!-- rooms pages start here -->
+      <div class="rooms">
+        <p class="title">Explore Our <span>Rooms</span></p>
+        <a href="room"></a>
+        <div class="roomCards">
+          <div class="card">
+            <img src="assets/images/room1.jpg" class="RoomImage" />
+            <div class="cardContent">
+              <h5 class="roomName">Single Bed Room</h5>
+              <p class="roomPrice">$50</p>
+            </div>
+            <div class="roomRate">
+              <div class="rates">
+                <p class="rateCounte">4.5</p>
+                <img src="assets/images/rating.png" class="rateImg" />
+              </div>
+              <a href="roomDetaill.html" class="cardbtn">Book Now</a>
+              <!-- <button class="cardbtn">Book Now</button> -->
+            </div>
+          </div>
+          <!-- frist card end here  -->
+          <div class="card">
+            <img src="assets/images/room2.jpg" class="RoomImage" />
+            <div class="cardContent">
+              <h5 class="roomName">Delux Room</h5>
+              <p class="roomPrice">$750</p>
+            </div>
+            <div class="roomRate">
+              <div class="rates">
+                <p class="rateCounte">4.4</p>
+                <img src="assets/images/rating.png" class="rateImg" />
+              </div>
+              <button class="cardbtn">Book Now</button>
+            </div>
+          </div>
+          <!-- second card end here  -->
+          <div class="card">
+            <img src="assets/images/room3.jpg" class="RoomImage" />
+            <div class="cardContent">
+              <h5 class="roomName">Family Bed Room</h5>
+              <p class="roomPrice">$50 / night</p>
+            </div>
+            <div class="roomRate">
+              <div class="rates">
+                <p class="rateCounte">4.3</p>
+                <img src="assets/images/rating.png" class="rateImg" />
+              </div>
+              <button class="cardbtn">Book Now</button>
+            </div>
+          </div>
+          <!-- thirty card end here  -->
+          <div class="card">
+            <img src="assets/images/room4.jpg" class="RoomImage" />
+            <div class="cardContent">
+              <h5 class="roomName">primary Room</h5>
+              <p class="roomPrice">$120</p>
+            </div>
+            <div class="roomRate">
+              <div class="rates">
+                <p class="rateCounte">4.1</p>
+                <img src="assets/images/rating.png" class="rateImg" />
+              </div>
+              <button class="cardbtn">Book Now</button>
+            </div>
+          </div>
+          <!-- fourty card end here  -->
+        </div>
+        <a href="rooms.html" class="roombtn btn"> see more </a>
+      </div>
+
+      <!-- rooms pages end here -->
+      <!-- feature pages satrt here -->
+      <div class="feature">
+        <p class="title">hotel <span>Features</span></p>
+        <div class="featureCards">
+          <div class="featurerigth">
+            <h3 class="featuretitle">Luxury Suite with Panoramic City View</h3>
+            <p class="featureInfo">
+              Experience unmatched luxury in our Panoramic City View Suite.
+              Relax in elegant comfort while enjoying breathtaking views of the
+              sparkling city skyline. Perfect for romantic evenings or peaceful
+              solo escapes above the lights of the city.
+            </p>
+          </div>
+          <div class="featureleft">
+            <img src="assets/images/gallery2.png" class="featureImages" />
+          </div>
+        </div>
+        <div class="featureCards">
+          <div class="featureleft">
+            <h3 class="featuretitle">Elegant Dining Experience</h3>
+            <p class="featureInfo">
+              Enjoy gourmet cuisine in our sophisticated restaurant, where
+              modern design meets warm ambiance. With refined wooden accents,
+              comfortable seating, and intimate lighting, every meal becomes a
+              memorable experience.
+            </p>
+          </div>
+
+          <div class="featurerigth">
+            <img src="assets/images/gallery3.jpg" class="featureImages" />
+          </div>
+        </div>
+        <div class="featureCards">
+          <div class="featurerigth">
+            <h3 class="featuretitle">State-of-the-Art Fitness Center</h3>
+            <p class="featureInfo">
+              Maintain your wellness routine in our modern fitness center,
+              equipped with the latest technology and premium equipment. From
+              cardio training to strength conditioning, every session becomes an
+              energizing experience in a sleek, inspiring setting.
+            </p>
+          </div>
+          <div class="featureleft">
+            <img src="assets/images/GymRoom.jpg" class="featureImages" />
+          </div>
+        </div>
+      </div>
+      <!-- Feature pages end here -->
+      <!-- Gallery pages start here -->
+      <div class="Gallery">
+        <p class="title">Our <span>Gallery</span></p>
+        <div class="GalleryCards">
+          <div class="GalleryRigth">
+            <img src="assets/images/blog-2.jpg" class="GalleryImage" alt="" />
+            <img
+              src="assets/images/services-3.jpg"
+              class="GalleryImage"
+              alt=""
+            />
+          </div>
+          <div class="GalleryLeft">
+            <img src="assets/images/blog-3.jpg" class="GalleryImage" alt="" />
+            <img
+              src="assets/images/services-4.jpg"
+              class="GalleryImage"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="paganing">
+          <p class="activePagine">1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>5</p>
+          <p>...</p>
+        </div>
+      </div>
+      <!-- Gallery pages end here -->
+      <!-- testimonial pages start here -->
+      <div class="testimonial">
+        <p class="title">What Our <span>Guests Say</span></p>
+        <div class="testimonialCards">
+          <div class="testimonialCard">
+            <img src="assets/images/review-2.jpg" class="userImage" />
+            <h4 class="userName">John Doe</h4>
+            <div class="userReview">
+              <div class="userRate">
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/rating.png" class="rateImg" />
+              </div>
+              <p>
+                "Amazing experience! The staff were incredibly friendly and the
+                rooms were spotless. Highly recommend!"
+              </p>
+            </div>
+          </div>
+          <div class="testimonialCard">
+            <img src="assets/images/review-1.jpg" class="userImage" />
+            <h4 class="userName">Hana M., Kenya</h4>
+            <div class="userReview">
+              <div class="userRate">
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/rating.png" class="rateImg" />
+              </div>
+              <p>
+                “From check-in to check-out, everything was seamless. The
+                infinity pool overlooking the sea is simply magical, especially
+                at sunset. This hotel knows what hospitality really means.”
+              </p>
+            </div>
+          </div>
+          <div class="testimonialCard">
+            <img src="assets/images/review-3.jpg" class="userImage" />
+            <h4 class="userName">Omar A., UAE</h4>
+            <div class="userReview">
+              <div class="userRate">
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/rating.png" class="rateImg" />
+              </div>
+              <p>
+                “The rooms are spacious, modern, and beautifully designed.
+                Breakfast by the pool was the highlight of our mornings — fresh,
+                elegant, and perfectly served. A true five-star experience.”
+              </p>
+            </div>
+          </div>
+          <div class="testimonialCard">
+            <img src="assets/images/review-4.jpg" class="userImage" />
+            <h4 class="userName">Sarah L., France</h4>
+            <div class="userReview">
+              <div class="userRate">
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/star.png" class="rateImg" />
+                <img src="assets/images/rating.png" class="rateImg" />
+              </div>
+              <p>
+                “Everything about our stay was exceptional — from the
+                breathtaking ocean views to the attention to detail in every
+                corner of the suite. The staff were genuinely kind and made us
+                feel at home. Can't wait to come back!”
+              </p>
+            </div>
+          </div>
+        </div>
+        <a href="" class="reviewbtn btn">More Review </a>
+      </div>
+      <!-- testimonial pages end here -->
+      <!-- subscription section pages start here -->
+      <div class="subscription">
+        <h2 class="subscriptionTitle">
+          Subscribe to our <span>Newsletter</span>
+        </h2>
+        <p class="subscriptionInfo">
+          Stay updated with the latest news and exclusive offers <br />
+          from Royal Plaze Hotel.
+        </p>
+        <div class="subscriptionForm">
+          <input
+            type="email"
+            class="subscriptionInput"
+            placeholder="Enter your email"
+          />
+          <button class="subscriptionBtn">Subscribe</button>
+        </div>
+      </div>
+      <!-- subscription section pages end here -->
+      <!-- footer section pages start here -->
+      <div class="footer">
+        <div class="footerContent">
+          <div class="footerSection">
+            <h3 class="footerTitle">About Us</h3>
+            <h2 class="footerlogo logo">Royal Plaze Hotel</h2>
+          </div>
+          <div class="footerSection">
+            <h3 class="footerTitle">Quick Links</h3>
+            <ul class="footerLinks">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Rooms</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footerSection">
+            <h3 class="footerTitle">Contact Us</h3>
+            <p class="footerInfo">
+              123 Main Street, Cityville, Country<br />
+              Phone: +123 456 7890<br />
+              Email:
+            </p>
+          </div>
+          <div class="footerSection">
+            <h3 class="footerTitle">Follow Us</h3>
+            <div class="socialIcons">
+              <a href="#"
+                ><img src="assets/images/social-icon-1.svg" class="socialImg"
+              /></a>
+              <a href="#"
+                ><img src="assets/images/social-icon-2.svg" class="socialImg"
+              /></a>
+              <a href="#"
+                ><img src="assets/images/social-icon-3.svg" class="socialImg"
+              /></a>
+              <a href="#"
+                ><img src="assets/images/social-icon-4.svg" class="socialImg"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <p class="footerCopy">
+          &copy; 2024 Royal Plaze Hotel. All rights reserved.
+          <!-- footer section pages end here -->
+        </p>
+      </div>
+    </div>
+
+    <script>
+      flatpickr("#checkin", {
+        dateFormat: "d/m/Y",
+        position: "auto center", // centers calendar popup
+        minDate: "today",
+        theme: "light",
+      });
+
+      flatpickr("#checkout", {
+        dateFormat: "d/m/Y",
+        position: "auto center",
+        minDate: new Date().fp_incr(1), // next day by default
+        theme: "light",
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+📧 GUIDE ÉTAPE PAR ÉTAPE - MAILTRAP + WAMP
+==========================================
+
+ÉTAPE 1: CRÉER UN COMPTE MAILTRAP
+==================================
+1. Va sur https://mailtrap.io
+2. Clique "Sign Up" (inscription gratuit)
+3. Remplis le formulaire (email, password)
+4. Valide ton email
+
+ÉTAPE 2: OBTENIR LES PARAMÈTRES SMTP
+=====================================
+1. Une fois connecté, tu vois le dashboard
+2. À gauche, clique sur "Email Testing" (ou tu es déjà dedans)
+3. Tu dois voir une "Inbox" par défaut (ou crée une nouvelle)
+4. Clique sur "Integrations" ou "SMTP Settings"
+5. Tu verras quelque chose comme:
+
+   Host: smtp.mailtrap.io
+   Port: 465 (ou 587)
+   Username: [long code]
+   Password: [long code]
+
+COPIE BIEN CES 4 INFOS! (surtout le username et password)
+
+ÉTAPE 3: MODIFIER php.ini DANS WAMP
+===================================
+1. Ouvre: C:\wamp64\bin\php\php[VERSION]\php.ini
+   (Remplace [VERSION] par ta version, ex: php7.4.26 ou php8.1.0)
+   
+   Astuce: Dans WAMP, tu peux aussi double-cliquer sur l'icône WAMP
+   → PHP → php.ini
+
+2. Cherche la section [mail function] (Ctrl+F)
+
+3. Tu verras quelque chose comme:
+   [mail function]
+   ; For Win32 only.
+   SMTP = localhost
+   smtp_port = 25
+
+4. REMPLACE par (utilise tes vraies identifiants Mailtrap):
+   
+   [mail function]
+   SMTP = smtp.mailtrap.io
+   smtp_port = 465
+   sendmail_from = "hotel@royalplaze.com"
+   
+   ; Configuration pour authentification Mailtrap (important!)
+   ; Ajoute ces lignes:
+   ; auth_username = [TON_USERNAME_MAILTRAP]
+   ; auth_password = [TON_PASSWORD_MAILTRAP]
+
+ATTENTION: Sur Windows WAMP, l'authentification SMTP est compliquée
+→ On va utiliser une autre méthode (voir étape 4)
+
+ÉTAPE 4: ALTERNATIVE - UTILISER PHPMailer (RECOMMANDÉ)
+=======================================================
+C'est plus fiable que la fonction mail() native.
+
+1. Télécharge PHPMailer: 
+   https://github.com/PHPMailer/PHPMailer/releases
+   Ou utilise Composer (si installé):
+   composer require phpmailer/phpmailer
+
+2. Extrais les fichiers dans: c:\wamp64\www\hotel_reservation\vendor\
+
+3. Je vais modifier send_email.php pour utiliser PHPMailer
+   avec tes identifiants Mailtrap
+
+ÉTAPE 5: CONFIGURATION FINALE (avec PHPMailer)
+===============================================
+Une fois que tu me dis tes identifiants Mailtrap:
+
+Host: smtp.mailtrap.io
+Port: 465
+Username: [COPIE-COLLE ICI]
+Password: [COPIE-COLLE ICI]
+
+Je vais mettre à jour send_email.php automatiquement!
+
+ÉTAPE 6: REDÉMARRER WAMP
+=========================
+1. Clique sur l'icône WAMP dans la barre des tâches
+2. Clique "Restart All Services"
+3. Attends que tous les services soient en vert
+
+ÉTAPE 7: TESTER
+===============
+Va sur: http://localhost/hotel_reservation/test_email.php
+Entre une adresse email et clique "Envoyer email de test"
+
+Puis va dans Mailtrap sur ton Inbox → tu dois voir l'email dedans!
+
+PRÊT? 
+Dis-moi:
+1. Tes identifiants Mailtrap (Host, Port, Username, Password)
+2. Ou dis-moi si tu veux que j'utilise PHPMailer
+
+Je configurerai tout automatiquement! 🚀

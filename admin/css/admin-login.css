@@ -1,0 +1,84 @@
+/* Background noir prestige */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #000, #0b0b0b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container luxe */
+.login-box {
+    width: 420px;
+    padding: 40px;
+    background: rgba(10, 10, 10, 0.85);
+    border: 1px solid rgba(197,160,40,0.4);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(197,160,40,0.25);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from { transform: translateY(25px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Titre doré */
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #c5a028;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(197,160,40,0.5);
+}
+
+/* Inputs style golden */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(197,160,40,0.4);
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+}
+
+.login-box input:focus {
+    border: 1px solid #c5a028;
+    box-shadow: 0 0 10px rgba(197,160,40,0.6);
+}
+
+/* Bouton prestige */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #c5a028;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0b0b0b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: #e6b93d;
+    box-shadow: 0 0 15px rgba(197,160,40,0.8);
+}
+
+/* Erreur */
+.error {
+    color: #ff4444;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}

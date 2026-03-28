@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --gold: #c5a028;
+  --dark: #0d0d0d;
+  --bg: #141414;
+  --light: #f5f5f5;
+  --gray: #999;
+  --danger: #ff4d4d;
+  --success: #00c851;
+  --card: #1f1f1f;
+  --border: rgba(255,255,255,0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--light);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ================= Sidebar ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--dark);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 15px;
+  z-index: 10;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 18px;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--light);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  background-color: var(--gold);
+  color: var(--dark);
+}
+
+/* ================= Layout ================= */
+.dashboard, main {
+  margin-left: 250px;
+  padding: 35px 40px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+
+/* ================= Statistiques ================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #bbb;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.card.gold { border-top: 4px solid var(--gold); }
+.card.blue { border-top: 4px solid #00bfff; }
+.card.green { border-top: 4px solid #00c851; }
+.card.dark { border-top: 4px solid #555; }
+
+/* ================= Graphiques ================= */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.chart-container {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.chart-container h3 {
+  color: var(--gold);
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ================= Calendrier ================= */
+.calendar {
+  background-color: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.calendar h3 {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fc {
+  background: transparent;
+  color: var(--light);
+}
+
+.fc-toolbar-title {
+  color: var(--gold);
+}
+
+.fc-button {
+  background: var(--gold) !important;
+  color: var(--dark) !important;
+  border: none !important;
+}
+
+.fc-daygrid-day-number {
+  color: var(--light);
+}
+
+.fc-event {
+  background: var(--gold);
+  border: none;
+  color: #000;
+  font-weight: 500;
+}
+
+/* ================= Tables ================= */
+.table-container {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  padding: 25px;
+  overflow-x: auto;
+  margin-top: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--light);
+  font-size: 15px;
+}
+
+thead {
+  background-color: #191919;
+}
+
+th, td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+th {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+tr:hover {
+  background-color: rgba(255,255,255,0.04);
+}
+
+.actions a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--gold);
+  transition: 0.3s;
+}
+
+.actions a:hover {
+  color: #fff;
+}
+
+.actions span {
+  color: var(--gray);
+  margin: 0 6px;
+}
+
+/* ================= Buttons ================= */
+.btn, button, input[type="submit"] {
+  background: var(--gold);
+  border: none;
+  color: var(--dark);
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover, button:hover, input[type="submit"]:hover {
+  background: #e0b944;
+}
+
+a.btn {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #ff6666;
+}
+
+/* ================= Forms ================= */
+form {
+  background-color: var(--card);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+form h2 {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  color: var(--light);
+  font-weight: 500;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  background: #101010;
+  color: var(--light);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1000px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .dashboard {
+    margin-left: 220px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+  }
+
+  .dashboard {
+    margin-left: 0;
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar nav ul li a {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+}
